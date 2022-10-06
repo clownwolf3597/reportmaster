@@ -82,3 +82,13 @@
         }
     }
 }
+
+::ng-deep{
+    .app-container{
+        .app-body{
+            .content{
+                width: 100% !important;
+            }
+        }
+    }
+}

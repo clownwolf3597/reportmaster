@@ -1,9 +1,9 @@
 <div class="header-container">
     <div class="left-section">
-        <img *ngIf="!appService?.isLoginPage" src="../../../assets/menu.png" (click)="menuReference.toggle()" />
+        <img *ngIf="isApplication" src="../../../assets/menu.png" (click)="menuReference.toggle()" />
         <h2>RM</h2>
     </div>
-    <ng-container *ngIf="!appService?.isLoginPage">
+    <ng-container *ngIf="isApplication">
         <div class="right-section">
             <div class="client-selector">
                 <ng-select [items]="clients" bindLabel="name" bindValue="id" [(ngModel)]="selectedClient"></ng-select>
