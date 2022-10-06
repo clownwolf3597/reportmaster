@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 
   get isApplication(): boolean {
-    return window.location.href.includes('app');
+    return window.location.href.includes('/app');
   }
 
   ngOnInit(): void {
