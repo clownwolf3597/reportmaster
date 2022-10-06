@@ -71,10 +71,6 @@
             }
 
             .content {
-                &:not(.full-width) {
-                    width: 1200px;
-                }
-
                 height: 100%;
                 margin: auto;
             }

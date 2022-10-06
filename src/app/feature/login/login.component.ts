@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
     private appService: AppService) { }
 
   ngOnInit(): void {
-    this.appService.setIsLoginPage(true);
   }
 
   createUser(): void {

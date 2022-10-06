@@ -10,9 +10,10 @@ export class AppService {
     isLoginPage: boolean = false;
 
     constructor(private router: Router) {
-    }
-
-    setIsLoginPage(_isLoginPage: boolean): void{
-        this.isLoginPage = _isLoginPage;
+        this.router.events.subscribe((value: any) => {
+            if (value instanceof NavigationEnd) {
+                this.isLoginPage = (value?.url === '/login');
+            }
+        });
     }
 }
