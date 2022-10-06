@@ -9,5 +9,6 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'reportMaster';
   constructor(public appService: AppService) {
+    this.appService.setIsLoginPage(false);
   }
 }

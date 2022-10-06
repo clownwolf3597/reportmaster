@@ -10,6 +10,9 @@ export class AppService {
     isLoginPage: boolean = false;
 
     constructor(private router: Router) {
-        this.isLoginPage = !window.location.href.includes('app');
+    }
+
+    setIsLoginPage(_isLoginPage: boolean): void{
+        this.isLoginPage = _isLoginPage;
     }
 }
