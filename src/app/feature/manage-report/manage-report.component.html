@@ -1,0 +1,46 @@
+<div class="manage-report-container">
+    <div class="meta-data">
+        <div class="title">
+            <img src="../assets/manage-report.png" />
+            <span>Manage Report</span>
+        </div>
+        <div class="date-picker">
+            <img src="../../../assets/calendar.png" />
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Pick Date" class="form-control" bsDatepicker>
+            </div>
+        </div>
+    </div>
+    <div class="report-data" [formGroup]="reportForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Duration</th>
+                    <th>Comments</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of report; let i = index;">
+                    <td>
+                        <ng-select [items]="tasks" bindLabel="name" bindValue="id" placeholder="Task"></ng-select>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Duration" />
+                    </td>
+                    <td>
+                        <textarea placeholder="Enter comments here..."></textarea>
+                    </td>
+                    <td>
+                        <img src="../../../assets/add.png">
+                    </td>
+                    <td>
+                        <img src="../../../assets/delete.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

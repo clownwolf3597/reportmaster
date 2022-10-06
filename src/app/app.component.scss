@@ -1,0 +1,83 @@
+:host {
+    .app-container {
+        height: 100%;
+
+        .app-header {
+            border-bottom: 1px solid lightgray;
+        }
+
+        .app-body {
+            height: calc(100% - 80px);
+            background: linear-gradient(to bottom, #e2edf3 0%, #f3f8fb 150px);
+
+            .app-body-container {
+                height: 100%;
+
+                mat-drawer {
+                    box-shadow: 5px 5px 5px #00000052;
+                    background-color: #f3f8fb;
+                    width: 220px;
+                    padding: 25px;
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            list-style-type: none;
+
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 10px;
+                            }
+
+                            a {
+                                font-size: 15px;
+                                display: inline-block;
+                                position: relative;
+                                color: #000;
+                                cursor: pointer;
+                                text-decoration: none;
+                                outline: none;
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    transform: scaleX(0);
+                                    height: 2px;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: #000;
+                                    transform-origin: bottom right;
+                                    transition: transform 0.5s ease-out;
+                                }
+
+                                &:hover:after {
+                                    transform: scaleX(1);
+                                    transform-origin: bottom left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content {
+                &:not(.full-width) {
+                    width: 1200px;
+                }
+
+                height: 100%;
+                margin: auto;
+            }
+        }
+    }
+}

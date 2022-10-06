@@ -1,0 +1,156 @@
+:host {
+    .manage-report-container {
+        padding: 20px;
+
+        .meta-data {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-left: 15px;
+
+            .title {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            .date-picker {
+                display: flex;
+                align-items: center;
+                border: 1px solid lightgray;
+                padding: 5px 10px;
+                background: #FFF;
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 10px;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+        .report-data {
+            box-shadow: #00000085 0 0 10px;
+            border-radius: 10px;
+
+            table {
+                width: 100%;
+
+                thead {
+                    th {
+                        background: #5699f275;
+                        border-bottom: 1px solid #d3d3d3a1;
+
+                        &:not(:last-child) {
+                            border-right: 1px solid #d3d3d3a1;
+                        }
+
+                        &:first-child {
+                            border-top-left-radius: 10px;
+                            padding-left: 20px;
+                        }
+
+                        &:last-child {
+                            border-top-right-radius: 10px;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            background: #FFF;
+                        }
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid #d3d3d3a1;
+                        }
+
+                        &:last-child {
+                            td {
+
+                                &:first-child {
+                                    border-bottom-left-radius: 10px;
+                                }
+
+
+                                &:last-child {
+                                    border-bottom-right-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                th,
+                td {
+                    padding: 10px;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid #d3d3d3a1;
+                    }
+
+                    &:nth-child(1) {
+                        width: 30%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 10%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 50%;
+                    }
+
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        width: 5%;
+                        text-align: center;
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+
+                    ::ng-deep {
+
+                        ng-select .ng-select-container,
+                        input,
+                        textarea {
+                            border: none;
+                            outline: none;
+                            width: 100%;
+                            resize: none;
+                        }
+
+                        ng-select {
+                            .ng-select-container {
+                                .ng-value-container {
+                                    // padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

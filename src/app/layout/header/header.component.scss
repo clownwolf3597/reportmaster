@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+:host {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+
+        .left-section {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+
+            h2 {
+                font-family: 'Monoton', cursive;
+                font-size: 50px;
+                color: #5699f2;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+
+        .right-section {
+            display: flex;
+            align-items: center;
+
+            .client-selector {
+                margin-right: 20px;
+
+                ng-select {
+                    min-width: 300px;
+                }
+            }
+
+            .power {
+                width: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}

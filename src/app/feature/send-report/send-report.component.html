@@ -1,0 +1,34 @@
+<div class="send-report-container">
+    <div class="meta-data">
+        <div class="title">
+            <img src="../assets/send-report.png" />
+            <span>Send Report</span>
+        </div>
+    </div>
+    <div class="employees-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID #</th>
+                    <th>Employee Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of employees; let i = index;">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <span class="report-availability icon-container"
+                            [ngClass]="{'red' : item.reportavailabilityindicator, 'green': !item.reportavailabilityindicator}">
+                            <img src="../../../assets/report.png" />
+                        </span>
+                        <span class="view-report icon-container">
+                            <img src="../../../assets/view.png" />
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
